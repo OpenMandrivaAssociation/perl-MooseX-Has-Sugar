@@ -1,5 +1,5 @@
 %define upstream_name    MooseX-Has-Sugar
-%define upstream_version 0.0404
+%define upstream_version 0.0405
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -20,6 +20,7 @@ BuildRequires: perl(Test::Exception)
 BuildRequires: perl(Test::More)
 BuildRequires: perl(Test::use::ok)
 BuildRequires: perl(namespace::autoclean)
+
 BuildArch: noarch
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
@@ -30,24 +31,21 @@ no description found
 %setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
-%{__perl} Makefile.PL INSTALLDIRS=vendor
-
-%{make}
+%{__perl} Build.PL installdirs=vendor
+./Build
 
 %check
-%{make} test
+./Build test
 
 %install
-rm -rf %buildroot
-%makeinstall_std
+%{__rm} -rf %{buildroot}
+./Build install destdir=%{buildroot}
 
 %clean
-rm -rf %buildroot
+rm -rf %{buildroot}
 
 %files
 %defattr(-,root,root)
 %doc Changes LICENSE README
 %{_mandir}/man3/*
 %perl_vendorlib/*
-
-
