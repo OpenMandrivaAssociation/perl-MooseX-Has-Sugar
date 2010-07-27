@@ -1,5 +1,5 @@
 %define upstream_name    MooseX-Has-Sugar
-%define upstream_version 0.0405
+%define upstream_version 0.05044303
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
