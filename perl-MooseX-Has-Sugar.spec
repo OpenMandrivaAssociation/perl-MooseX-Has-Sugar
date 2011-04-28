@@ -1,9 +1,9 @@
 %define upstream_name    MooseX-Has-Sugar
-%define upstream_version 0.05055616
+%define upstream_version 0.05070419
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 2
+Release:    %mkrel 1
 
 Summary:    Experimental sweetness
 License:    GPL+ or Artistic
