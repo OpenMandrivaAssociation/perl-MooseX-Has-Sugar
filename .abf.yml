@@ -1,4 +1,5 @@
 removed_sources:
   MooseX-Has-Sugar-0.05070419.tar.gz: 8ee7d1bb2bd7ca55a96f3710ec0a20bc7277cabf
-sources:
   MooseX-Has-Sugar-0.05070421.tar.gz: 61a0fc2efd52f439e00e62df6c51c466ccd05e42
+sources:
+  MooseX-Has-Sugar-1.000000.tar.gz: 3ab36602427cabfe8048420ae4b8cf15edebd2f3
